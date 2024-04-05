@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.transition.AutoTransition
 import androidx.transition.Fade
 import com.google.android.material.transition.MaterialContainerTransform
 
@@ -13,7 +14,7 @@ class SecondFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enterTransition = Fade()
-        sharedElementEnterTransition = MaterialContainerTransform()
+        sharedElementEnterTransition = AutoTransition()
     }
 
     override fun onCreateView(
